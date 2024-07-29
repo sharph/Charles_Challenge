@@ -8,7 +8,7 @@ environment.
 Install terraform, run `terraform init` in this directory, then run
 `terraform apply`. At the prompt, type `yes`.
 
-Terraform will set up a self-signed certificate VPC, load balancer,
+Terraform will set up a self-signed certificate, VPC, load balancer,
 security groups, Fargate tasks, etc. The Fargate task specified installs the
 desired contents to index.html, then runs nginx.
 
@@ -27,7 +27,7 @@ two to become healthy.
 
 ## Automated Test
 
-Set the `URL` environment variable before running `python3 test.py` to ensure:
+Set the `URL` environment variable, then run `python3 test.py` to ensure:
 
 * The result from connecting to the URL contains the string "Hello World!"
 * Connecting to HTTP redirects to HTTPS
